@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Pivotal Albums - All Albums</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Latest compiled and minified CSS -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" />
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://pivotal.io/">
+                <img src="images/PoweredByPivotal1.png"
+                     th:src="@{images/PoweredByPivotal1.png}"
+                     alt="FooterImage"
+                     border="0"/>
+            </a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <form th:action="@{/searchAlbums}" method="post" class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type="text" id="title" name="title" placeholder="Search by Title" class="form-control" />
+                </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right nav-pills">
+                <li>
+                    <a th:href="@{/}">
+                        <img src="images/b_home.png"
+                             th:src="@{images/b_home.png}"
+                             alt="Home"
+                             border="0"/>
+                        Home
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">Menu <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a th:href="@{/albums}">
+                                <img src="images/s_tbl.png"
+                                     th:src="@{images/s_tbl.png}"
+                                     alt="Albums"
+                                     border="0"/>
+                                View Albums
+                            </a>
+                        </li>
+                        <li>
+                            <a th:href="@{/killme}">
+                                <img src="images/s_error.png"
+                                     th:src="@{images/s_error.png}"
+                                     alt="Kill Me"
+                                     border="0"/>
+                                Kill Me!!!
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a th:href="@{/addnew}">
+                                <img src="images/add16.gif"
+                                     th:src="@{images/add16.gif}"
+                                     alt="Add New"
+                                     border="0"/>
+                                Add New Album
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+<!-- NAVBAR CODE END -->
+<div class="bs-example">
+    <div class="page-header">
+        <h1> Pivotal Albums - <small> All Albums</small></h1>
+    </div>
+</div>
+
+<div class="bs-example" th:if="${actionStr != null}">
+    <div class="alert alert-success fade in">
+        <a href="#" class="close" data-dismiss="alert">&times;</a>
+        <strong>Success!</strong> <span th:text="${actionStr}" />
+    </div>
+</div>
+
+<div class="bs-example" th:if="${count > 0}">
+    <div class="alert alert-success fade in">
+        <a href="#" class="close" data-dismiss="alert">&times;</a>
+        <strong>Success!</strong> Found <b th:text="${count}"></b> Albums
+    </div>
+    <div class="col-xs-8">
+        <table class="table table-hover table-bordered table-striped table-condensed">
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Title</th>
+                    <th>Artist</th>
+                    <th>Release Year</th>
+                    <th class="text-center">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="album : ${albums}">
+                    <td th:text="${albumStat.count}">1</td>
+                    <td th:text="${album.title}"></td>
+                    <td th:text="${album.artist}"></td>
+                    <td th:text="${album.releaseYear}"></td>
+                    <td align="center">
+                        <a th:href="'/editalbum?id=' + ${album.id}" class="btn btn-primary">Edit</a>
+                        <a th:href="'/deletealbum?id=' + ${album.id}" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+              </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="clearfix">
+</div>
+
+<hr size="2" />
+
+<div th:include="footer :: copy"></div>
+
+</body>
+</html>
