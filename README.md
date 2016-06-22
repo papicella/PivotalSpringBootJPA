@@ -8,6 +8,29 @@ The following demo is a PWS Workshop known as Level 100, to get started on PWS.
 
 <h2> Steps to Run Locally </h2>
 
+- Clone as follows
+
+```
+> git clone https://github.com/papicella/PivotalSpringBootJPA.git
+```
+
+- package as shown below
+
+```
+> mvn package
+```
+
+- Run as follows
+
+```
+mvn spring-boot:run
+```
+
+- Access as follows
+
+```
+http://localhost:8080/
+```
 
 <hr />
 <i>
