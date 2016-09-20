@@ -4,8 +4,5 @@ applications:
   instances: 1
   host: albums-${random-word}
   path: ./target/PivotalSpringBootJPA-0.0.1-SNAPSHOT.jar
-  services:
-    - pas-mysql
   env:
     JAVA_OPTS: -Djava.security.egd=file:///dev/urando
-    SPRING_PROFILES_ACTIVE: cloud
