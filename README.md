@@ -67,7 +67,7 @@ applications:
 - name: pas-albums
   memory: 512M
   instances: 1
-  host: albums-${random-word}
+  random-route: true
   path: ./target/PivotalSpringBootJPA-0.0.1-SNAPSHOT.jar
   services:
     - pas-mysql
