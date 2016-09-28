@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import pas.au.pivotal.springboot.demo.Utils;
 import pas.au.pivotal.springboot.demo.domain.Album;
 import pas.au.pivotal.springboot.demo.repositories.JpaAlbumRepository;
 
@@ -36,6 +37,9 @@ public class AlbumController
         model.addAttribute("albums", albums);
         model.addAttribute("count", albums.size());
         model.addAttribute("countStr", String.format("Total of %s albums", albums.size()));
+        model.addAttribute("appIndex", Utils.applicationIndex());
+        model.addAttribute("dbservice", Utils.getDBService());
+
         return "albums";
     }
 
@@ -47,6 +51,9 @@ public class AlbumController
         model.addAttribute("albums", albums);
         model.addAttribute("count", albums.size());
         model.addAttribute("countStr", String.format("Total of %s albums", albums.size()));
+        model.addAttribute("appIndex", Utils.applicationIndex());
+        model.addAttribute("dbservice", Utils.getDBService());
+
         return "albums";
     }
 
@@ -62,6 +69,9 @@ public class AlbumController
         model.addAttribute("albums", albums);
         model.addAttribute("count", albums.size());
         model.addAttribute("countStr", String.format("Total of %s albums", albums.size()));
+        model.addAttribute("appIndex", Utils.applicationIndex());
+        model.addAttribute("dbservice", Utils.getDBService());
+
         return "albums";
     }
 
@@ -70,6 +80,8 @@ public class AlbumController
     {
         Album album = new Album();
         model.addAttribute("album", album);
+        model.addAttribute("appIndex", Utils.applicationIndex());
+        model.addAttribute("dbservice", Utils.getDBService());
         return "newalbum";
     }
 
@@ -78,6 +90,9 @@ public class AlbumController
     {
         Album album = repository.findOne(id);
         model.addAttribute("album", album);
+        model.addAttribute("appIndex", Utils.applicationIndex());
+        model.addAttribute("dbservice", Utils.getDBService());
+
         return "editalbum";
     }
 
@@ -89,6 +104,8 @@ public class AlbumController
         model.addAttribute("albums", albums);
         model.addAttribute("count", albums.size());
         model.addAttribute("countStr", String.format("Total of %s albums", albums.size()));
+        model.addAttribute("appIndex", Utils.applicationIndex());
+        model.addAttribute("dbservice", Utils.getDBService());
 
         return "albums";
     }
@@ -111,6 +128,8 @@ public class AlbumController
         model.addAttribute("albums", albums);
         model.addAttribute("count", albums.size());
         model.addAttribute("countStr", String.format("Total of %s albums", albums.size()));
+        model.addAttribute("appIndex", Utils.applicationIndex());
+        model.addAttribute("dbservice", Utils.getDBService());
 
         return "albums";
     }
@@ -135,6 +154,8 @@ public class AlbumController
         model.addAttribute("albums", albums);
         model.addAttribute("count", albums.size());
         model.addAttribute("countStr", String.format("Total of %s albums", albums.size()));
+        model.addAttribute("appIndex", Utils.applicationIndex());
+        model.addAttribute("dbservice", Utils.getDBService());
 
         return "albums";
     }
