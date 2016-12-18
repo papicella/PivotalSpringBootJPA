@@ -1,0 +1,5 @@
+Demos ->
+
+curl http://localhost:8080/all_albums | jq
+
+curl http://localhost:8080/albums/1 | jq
