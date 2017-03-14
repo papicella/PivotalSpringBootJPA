@@ -7,8 +7,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import pas.au.pivotal.springboot.demo.domain.Album;
 import pas.au.pivotal.springboot.demo.repositories.JpaAlbumRepository;
 import pas.au.pivotal.springboot.demo.Utils;
+
+import java.util.List;
 
 @Controller
 public class WelcomeController
@@ -25,6 +28,10 @@ public class WelcomeController
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String welcome(Model model)
     {
+
+        List<Album> albums = (List<Album>) repository.findAll();
+
+        model.addAttribute("albums", albums);
 
         model.addAttribute("count", repository.findAll().size());
         model.addAttribute("appIndex", Utils.applicationIndex());
