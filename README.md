@@ -1,6 +1,6 @@
 <h1>Pivotal Cloud Foundry Cloud Native Developer Workshop</h1>
 
-![alt tag](https://ibb.co/cTWet5)
+![alt tag](https://image.ibb.co/cCEomQ/logo.png)
 
 https://ibb.co/dUOQY5
 
