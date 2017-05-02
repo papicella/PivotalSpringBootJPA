@@ -1,19 +1,10 @@
-<h1>Pivotal CF - Spring Boot / Spring Data JPA / Thymeleaf with Bootstrap demo</h1>
+<h1>Pivotal Cloud Foundry Cloud Native Developer Workshop</h1>
 
-The following demo is a PWS Workshop known as Level 100, to get started on PWS. The application is 
-set to use an embedded H2 database in non-PaaS environments and can be run locally as shown below. To 
-take advantage of Pivotal CF's auto-configuration for services you should create a MYSQL service
-prior to deploying this as shown below
+![alt tag](https://ibb.co/cTWet5)
 
-```
-> cf create-service cleardb spark pas-mysql
-```
+https://ibb.co/dUOQY5
 
-Detailed instructions can be found here, including materials for this workshop as either PPT, keynote or PDF
-
-```
-> https://dl.dropboxusercontent.com/u/15829935/platform-demos/workshop/level100/index.html
-```
+Please join us at Pivotal for a half-day hands-on workshop to introduce concepts and development practices surrounding the use of Pivotal Cloud Foundry. This workshop provides attendees with the concepts and experience needed to work with and deploy applications on Pivotal Cloud Foundry. Attendees will gain experience in pushing apps to Pivotal Cloud Foundry, accessing logs, scaling and will explore topics directly related to the design and running of cloud-native applications, including metrics, high availability and blue-green deployments.
 
 
 <h2>Pivotal Albums Page</h2>
