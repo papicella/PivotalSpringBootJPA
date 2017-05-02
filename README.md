@@ -2,70 +2,16 @@
 
 ![alt tag](https://image.ibb.co/cCEomQ/logo.png)
 
-https://ibb.co/dUOQY5
-
 Please join us at Pivotal for a half-day hands-on workshop to introduce concepts and development practices surrounding the use of Pivotal Cloud Foundry. This workshop provides attendees with the concepts and experience needed to work with and deploy applications on Pivotal Cloud Foundry. Attendees will gain experience in pushing apps to Pivotal Cloud Foundry, accessing logs, scaling and will explore topics directly related to the design and running of cloud-native applications, including metrics, high availability and blue-green deployments.
 
+## Prerequisites
 
-<h2>Pivotal Albums Page</h2>
+- An account with PWS (https://run.pivotal.io/)
+- At least 1G of memory and 1 service spare capacity on your PWS account
+- Maven CLI installed (https://maven.apache.org/download.cgi), for this workshop it was tested with “Apache Maven 3.3.9"
+- Git CLI installed (https://git-scm.com/downloads)
+- Java 1.8 installed, this workshop was tested with “1.8.0_91”. It may work with JDK 1.7 BUT has not been tested
 
-![alt tag](https://dl.dropboxusercontent.com/u/15829935/platform-demos/workshop/level100/image1.png)
-
-<h2> Steps to Run Locally (using H2 in memory database) </h2>
-
-- Clone as follows
-
-```
-> git clone https://github.com/papicella/PivotalSpringBootJPA.git
-```
-
-- package as shown below
-
-```
-> mvn package
-```
-
-- Run as follows
-
-```
-mvn spring-boot:run
-```
-
-- Access as follows
-
-```
-http://localhost:8080/
-```
-
-<h2> Steps to Run On PCF (using MySQL instance if bound to such a service) </h2>
-
-- package as shown below
-
-```
-> mvn package
-```
-
-- deploy using the default manifest.yml 
-
-```
-> cf push
-```
-
-manifest.yml is expecting a MySQL instance called "pas-mysql" if it does not exist change it to a name of one that exists
-
-```
-applications:
-- name: pas-albums
-  memory: 512M
-  instances: 1
-  random-route: true
-  path: ./target/PivotalSpringBootJPA-0.0.1-SNAPSHOT.jar
-  services:
-    - pas-mysql
-  env:
-    JAVA_OPTS: -Djava.security.egd=file:///dev/urando
-    SPRING_PROFILES_ACTIVE: cloud
-```
 
 <hr />
 <i>
