@@ -12,6 +12,22 @@ Please join us at Pivotal for a half-day hands-on workshop to introduce concepts
 - Git CLI installed (https://git-scm.com/downloads)
 - Java 1.8 installed, this workshop was tested with “1.8.0_91”. It may work with JDK 1.7 BUT has not been tested
 
+## Agenda
+
+- What is Pivotal Cloud Foundry (and Cloud Native with PCF)
+- Using Pivotal Web Services (Applications Manager, Spaces, Services, CLI)
+- Cloning a project using GIT
+- Package a Spring Boot Application using Maven
+- Installing the CF CLI Tool
+- Creating a MySQL service from the marketplace
+- Deploying archive using CF CLI and a manifest file binding to a MySQL service
+- Viewing an Application in Application Manager
+- Viewing Application Metrics
+- How to interact with PWS using the CF CLI
+- Testing Application High Availability
+- Blue - Green Deployment (Zero Downtime)
+
+![alt tag](hhttps://image.ibb.co/jB8W6Q/cn_dev_workshop_mainpage.png)
 
 <hr />
 <i>
