@@ -27,7 +27,7 @@ Please join us at Pivotal for a half-day hands-on workshop to introduce concepts
 - Testing Application High Availability
 - Blue - Green Deployment (Zero Downtime)
 
-![alt tag](hhttps://image.ibb.co/jB8W6Q/cn_dev_workshop_mainpage.png)
+![alt tag](https://image.ibb.co/jB8W6Q/cn_dev_workshop_mainpage.png)
 
 <hr />
 <i>
