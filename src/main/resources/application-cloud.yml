@@ -2,6 +2,17 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create
+management:
+  security:
+    enabled: false
+  info:
+    git:
+      mode: full
+  cloudfoundry:
+    skip-ssl-validation: true
+  endpoints:
+    actuator:
+      sensitive: false
 server:
   error:
     whitelabel:
