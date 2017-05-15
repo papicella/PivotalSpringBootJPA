@@ -7,8 +7,11 @@ Please join us at Pivotal for a half-day hands-on workshop to introduce concepts
 ## Prerequisites
 
 - An account with PWS (https://run.pivotal.io/)
-- At least 1G of memory and 1 service spare capacity on your PWS account
-- Maven CLI installed (https://maven.apache.org/download.cgi), for this workshop it was tested with “Apache Maven 3.3.9"
+- At least 1.5G of memory and 1 service spare capacity on your PWS account
+- CF CLI installed (https://github.com/cloudfoundry/cli)
+
+## Optional Prerequisites
+
 - Git CLI installed (https://git-scm.com/downloads)
 - Java 1.8 installed, this workshop was tested with “1.8.0_91”. It may work with JDK 1.7 BUT has not been tested
 
@@ -17,7 +20,6 @@ Please join us at Pivotal for a half-day hands-on workshop to introduce concepts
 - What is Pivotal Cloud Foundry (and Cloud Native with PCF)
 - Using Pivotal Web Services (Applications Manager, Spaces, Services, CLI)
 - Cloning a project using GIT
-- Package a Spring Boot Application using Maven
 - Installing the CF CLI Tool
 - Creating a MySQL service from the marketplace
 - Deploying archive using CF CLI and a manifest file binding to a MySQL service
