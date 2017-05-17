@@ -9,7 +9,10 @@ Please join us at Pivotal for a half-day hands-on workshop to introduce concepts
 - An account with PWS (https://run.pivotal.io/)
 - At least 1.5G of memory and 1 service spare capacity on your PWS account
 - CF CLI installed (https://github.com/cloudfoundry/cli)
+- All archive files can be downloaded using this link
 
+  https://drive.google.com/file/d/0B2wmRcJj8XF-MGZaRThtVFRvekE/view
+  
 ## Optional Prerequisites
 
 - Git CLI installed (https://git-scm.com/downloads)
