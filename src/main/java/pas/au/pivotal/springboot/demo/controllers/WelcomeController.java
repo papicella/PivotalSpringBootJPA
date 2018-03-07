@@ -33,9 +33,15 @@ public class WelcomeController
 
         model.addAttribute("albums", albums);
 
-        model.addAttribute("count", repository.findAll().size());
+        int size = repository.findAll().size();
+
+        model.addAttribute("count", size);
+
+        logger.info("Alums size = " + size);
         model.addAttribute("appIndex", Utils.applicationIndex());
         model.addAttribute("dbservice", Utils.getDBService());
+
+        logger.info("Returning welcome.html page");
 
         return "welcome";
     }

@@ -11,7 +11,7 @@ Please join us at Pivotal for a half-day hands-on workshop to introduce concepts
 - CF CLI installed (https://github.com/cloudfoundry/cli)
 - All archive files should be downloaded using this link prior to running the workshop
 
-  https://drive.google.com/file/d/1DS9UslOSEZb48uUb1EoQL7jjkANHTI3I/view?usp=sharing
+  https://drive.google.com/file/d/109MsNuoBB0EpCBUWfS2GO27So96LSCF5/view?usp=sharing
   
 ## Optional Prerequisites
 
