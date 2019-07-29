@@ -12,6 +12,7 @@ import pas.au.pivotal.springboot.demo.domain.Album;
 import pas.au.pivotal.springboot.demo.repositories.JpaAlbumRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class AlbumRest {
@@ -38,8 +39,8 @@ public class AlbumRest {
             produces = MediaType.APPLICATION_JSON_VALUE)
     public Album findAlbum(@PathVariable String albumid) {
         logger.info(String.format("REST request to get Album : {%s}", albumid));
-        Album album = repository.findOne(albumid);
+        Optional<Album> album = repository.findById(albumid);
 
-        return album;
+        return album.get();
     }
 }

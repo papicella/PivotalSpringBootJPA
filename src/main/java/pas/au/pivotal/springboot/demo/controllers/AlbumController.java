@@ -13,6 +13,7 @@ import pas.au.pivotal.springboot.demo.domain.Album;
 import pas.au.pivotal.springboot.demo.repositories.JpaAlbumRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class AlbumController
@@ -60,7 +61,7 @@ public class AlbumController
     @RequestMapping(value = "/deletealbum", method = RequestMethod.GET)
     public String deleteAlbum(@RequestParam("id") String id, Model model)
     {
-        repository.delete(id);
+        repository.deleteById(id);
         String actionStr = String.format("Album [%s] successfully deleted", id);
 
         List<Album> albums = repository.findAll();
@@ -88,8 +89,8 @@ public class AlbumController
     @RequestMapping(value = "/editalbum", method = RequestMethod.GET)
     public String editAlbum(@RequestParam(value="id", required=true) String id, Model model)
     {
-        Album album = repository.findOne(id);
-        model.addAttribute("album", album);
+        Optional<Album> album = repository.findById(id);
+        model.addAttribute("album", album.get());
         model.addAttribute("appIndex", Utils.applicationIndex());
         model.addAttribute("dbservice", Utils.getDBService());
 
